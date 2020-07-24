@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">SouthernCooper</string>
+    <string name="label_email">Correo</string>
+    <string name="label_password">Contraseña</string>
+    <string name="label_go_to_register">Crear una cuenta ? Regístrate</string>
+    <string name="btn_login">Iniciar sesión</string>
+    <string name="label_name">Nombre</string>
+    <string name="label_email_new">Correo Electrónico</string>
+    <string name="capture_image">Cámara</string>
+    <string name="btnconfirmremolienda">Confirmar</string>
+    <string name="date_format">%1$d-%2$s-%3$s</string>
+    <string name="press_back_again">Presione una vez mas para salir</string>
+    <string name="dialog_create_muestra_exit_title">¿Estás seguro que deseas salir?</string>
+    <string name="dialog_create_muestra_exit_message">Si abandonas el registro, los datos  que habias ingresado se perderán</string>
+    <string name="dialog_create_muestra_exit_positive_btn">Si, salir</string>
+    <string name="dialog_create_muestra_negative_btn">Continuar registro</string>
+    <string name="validate_name_description">Coloque primer nombre y primer apellido</string>
+    <string name="validate_remolienda_date">Es necesario definir una fecha</string>
+    <string name="validate_remolienda_time">Es necesario ingresar la hora</string>
+    <string name="DeniedPermit">Permiso Denegado</string>
+
+</resources>

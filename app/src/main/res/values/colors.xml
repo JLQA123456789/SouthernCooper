@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="BlackGloss">#00000f</color>
+    <color name="White">#FFFFFF</color>
+    <color name="cian_azul">#4a5a71</color>
+    <color name="backgroundWhite">#00000000</color>
+    <color name="colordashboard">#7B1FA2</color>
+    <color name="lightgray">#ededed</color>
+    <color name="dashboardpurple">#4A47A7</color>
+    <color name="yellow">#ffb300</color>
+    <color name="green">#00bfa5</color>
+    <color name="colorAccent1">#FF4081</color>
+    <color name="menuPrimary">#3F51B5</color>
+    <color name="menuPrimaryDark">#44E6c6</color>
+    <color name="menuAccent">#FF4081</color>
+    <color name="red">#FF5252</color>
+
+    <color name="navigationBarColorAttempted">#777</color>
+    <color name="navigationBarColorSkipped">#063e8b</color>
+    <color name="violet">#673ab7</color>
+    <color name="sky_blue">#0f96fe</color>
+    <color name="sky_blue_pressed">#245e61</color>
+    <color name="black">#000</color>
+    <color name="lightGreen">#76ab42</color>
+    <color name="white">#ffffff</color>
+</resources>
