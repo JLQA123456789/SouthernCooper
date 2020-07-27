@@ -8,7 +8,7 @@
     android:animateLayoutChanges="true"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".ActivityRemoliendaC1">
+    tools:context=".ui.ActivityRemoliendaC1">
 
 
 <!--    &lt;!&ndash;image view in which will be set&ndash;&gt;-->
@@ -169,19 +169,20 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:hint="ID">
+                    android:layout_marginTop="30dp"
+                    android:hint="ID"/>
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etID"
+                <Spinner
+                       android:id="@+id/etID"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="number" />
+                    />
 
-                </com.google.android.material.textfield.TextInputLayout>
+
+
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
@@ -352,19 +353,17 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:hint="ID">
+                    android:layout_marginTop="30dp"
+                    android:hint="ID"/>
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etID2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="number" />
-
-                </com.google.android.material.textfield.TextInputLayout>
+                <Spinner
+                    android:id="@+id/etID2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
@@ -554,19 +553,17 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:hint="ID">
+                    android:layout_marginTop="30dp"
+                    android:hint="ID"/>
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etID3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="number" />
-
-                </com.google.android.material.textfield.TextInputLayout>
+                <Spinner
+                    android:id="@+id/etID3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"

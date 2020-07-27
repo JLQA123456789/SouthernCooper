@@ -18,5 +18,8 @@
     <string name="validate_remolienda_date">Es necesario definir una fecha</string>
     <string name="validate_remolienda_time">Es necesario ingresar la hora</string>
     <string name="DeniedPermit">Permiso Denegado</string>
+    <string name="error_loading_ids">Ocurrio un problema al cargar los Ids</string>
+    <string name="error_login_response">Se obtuvo una respuesta inesperada del servidor</string>
+    <string name="error_invalid_credentials">Las credenciales son incorrectas</string>
 
 </resources>

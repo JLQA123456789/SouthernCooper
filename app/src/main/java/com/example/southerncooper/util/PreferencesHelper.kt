@@ -1,4 +1,4 @@
-package com.example.southerncooper
+package com.example.southerncooper.util
 
 import android.content.Context
 import android.content.SharedPreferences

@@ -5,7 +5,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorPrimaryDark"
-        tools:context=".ActivityConcentradora1">
+        tools:context=".ui.ActivityConcentradora1">
 
         <TextView
             android:id="@+id/textView"
@@ -288,7 +288,7 @@
 
 
                     <LinearLayout
-
+                        android:id="@+id/btnAnalizadores"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
                         android:layout_marginLeft="10dp"

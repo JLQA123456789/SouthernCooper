@@ -1,10 +1,12 @@
-package com.example.southerncooper
+package com.example.southerncooper.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.southerncooper.util.PreferenceHelper
 import kotlinx.android.synthetic.main.activity_menu_principal.*
-import com.example.southerncooper.PreferenceHelper.set
+import com.example.southerncooper.util.PreferenceHelper.set
+import com.example.southerncooper.R
 
 
 class ActivityMenuPrincipal : AppCompatActivity() {
@@ -21,14 +23,15 @@ class ActivityMenuPrincipal : AppCompatActivity() {
 
         btnLogout.setOnClickListener{
             clearsessionPreferences()
-            val intent = Intent(this,MainActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }
     }
 
     private fun clearsessionPreferences(){
-        val preferences= PreferenceHelper.defaultPrefs(this)
+        val preferences=
+            PreferenceHelper.defaultPrefs(this)
         preferences["session"] = false
     }
 }

@@ -1,4 +1,4 @@
-package com.example.southerncooper
+package com.example.southerncooper.ui
 
 import android.app.Activity
 import android.app.AlertDialog
@@ -14,14 +14,24 @@ import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.southerncooper.R
+import com.example.southerncooper.io.ApiService
+import com.example.southerncooper.model.Remolienda
 import com.github.chrisbanes.photoview.PhotoView
+import kotlinx.android.synthetic.main.activity_analizadores_id.*
 import kotlinx.android.synthetic.main.activity_remolienda_c1.*
 import kotlinx.android.synthetic.main.activity_remolienda_c1_card_view_confirmed.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.util.*
 
 class ActivityRemoliendaC1 : AppCompatActivity() {
 
 
+    private val apiService: ApiService by lazy{
+        ApiService.create()
+    }
 
     private var photoView:PhotoView?=null
 
@@ -83,7 +93,9 @@ class ActivityRemoliendaC1 : AppCompatActivity() {
                     val permissions = arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE);
                     //show popup to request runtime permission
 // muestra una ventana emergente para solicitar permiso de tiempo de ejecución
-                    requestPermissions(permissions, PERMISSION_CODE_GALLERY);
+                    requestPermissions(permissions,
+                        PERMISSION_CODE_GALLERY
+                    );
                 }
                 else{
                     //permission already granted
@@ -170,6 +182,8 @@ class ActivityRemoliendaC1 : AppCompatActivity() {
         val Muestra2Options = arrayOf("L2-2C", "L2-2A", "L2-2B")
         spinnerMuestra3.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Muestra2Options)
 
+        loadIdRemolienda()
+
     }
 
 
@@ -190,7 +204,9 @@ class ActivityRemoliendaC1 : AppCompatActivity() {
         //Action_PICK -> Actividad que muestra lista de objetos
         val intent = Intent(Intent.ACTION_PICK)
         intent.type = "image/*"
-        startActivityForResult(intent, IMAGE_PICK_CODE)
+        startActivityForResult(intent,
+            IMAGE_PICK_CODE
+        )
         //IMAGE_PICK_CODE-> resultcode
     }
 
@@ -223,7 +239,7 @@ class ActivityRemoliendaC1 : AppCompatActivity() {
                 }
             }
 
-            PERMISSION_CODE_GALLERY->{
+            PERMISSION_CODE_GALLERY ->{
 
                 if (grantResults.isNotEmpty() && grantResults[0] ==
                     PackageManager.PERMISSION_GRANTED){
@@ -274,7 +290,7 @@ class ActivityRemoliendaC1 : AppCompatActivity() {
                 resources.getString(
                     R.string.date_format,
                     y,
-                    m.twoDigits(),
+                    (m+1).twoDigits(),
                     d.twoDigits()
                 )
             )
@@ -364,7 +380,7 @@ override fun onBackPressed(){
         tvConfirmMuestra.text = spinnerMuestra.selectedItem.toString()
         tvConfirmVertimil.text = etVertimil.text.toString()
         tvConfirmTime.text = etTime.text.toString()
-        tvConfirmID.text = etID.text.toString()
+        tvConfirmID.text = etID.selectedItem.toString()
         tvConfirmAVE.text = etAVE.text.toString()
         tvConfirmSD.text = etSD.text.toString()
         tvConfirmDensity.text = etDensity.text.toString()
@@ -376,7 +392,7 @@ override fun onBackPressed(){
         tvConfirmMuestra2.text = spinnerMuestra2.selectedItem.toString()
         tvConfirmVertimil2.text = etVertimil2.text.toString()
         tvConfirmTime2.text = etTime2.text.toString()
-        tvConfirmID2.text = etID2.text.toString()
+        tvConfirmID2.text = etID2.selectedItem.toString()
         tvConfirmAVE2.text = etAVE2.text.toString()
         tvConfirmSD2.text = etSD2.text.toString()
         tvConfirmDensity2.text = etDensity2.text.toString()
@@ -388,7 +404,7 @@ override fun onBackPressed(){
         tvConfirmMuestra3.text = spinnerMuestra3.selectedItem.toString()
         tvConfirmVertimil3.text = etVertimil3.text.toString()
         tvConfirmTime3.text = etTime3.text.toString()
-        tvConfirmID3.text = etID3.text.toString()
+        tvConfirmID3.text = etID3.selectedItem.toString()
         tvConfirmAVE3.text = etAVE3.text.toString()
         tvConfirmSD3.text = etSD3.text.toString()
         tvConfirmDensity3.text = etDensity3.text.toString()
@@ -399,5 +415,52 @@ override fun onBackPressed(){
 
     }
 
+
+
+    private fun loadIdRemolienda(){
+
+        val call = apiService.getRemolienda()
+        call.enqueue(object : Callback<ArrayList<Remolienda>>{
+            override fun onFailure(call: Call<ArrayList<Remolienda>>, t: Throwable) {
+                Toast.makeText(this@ActivityRemoliendaC1, getString(R.string.error_loading_ids), Toast.LENGTH_SHORT).show()
+                finish()
+            }
+
+            override fun onResponse(
+                call: Call<ArrayList<Remolienda>>,
+                response: Response<ArrayList<Remolienda>>
+            ) {
+                if (response.isSuccessful) {//{200...300}
+
+                    val remolienda = response.body()
+                    val remoliendaoptions = ArrayList<Int>()
+                    remolienda?.forEach {
+                        remoliendaoptions.add(it.identify + 1)
+                    }
+
+                    val remolienda2 = response.body()
+                    val remoliendaoptions2 = ArrayList<Int>()
+                    remolienda?.forEach {
+                        remoliendaoptions2.add(it.identify + 2)
+                    }
+                    val remolienda3 = response.body()
+                    val remoliendaoptions3 = ArrayList<Int>()
+                    remolienda?.forEach {
+                        remoliendaoptions3.add(it.identify + 3)
+                    }
+
+
+
+                    etID.adapter = ArrayAdapter<Int>(this@ActivityRemoliendaC1, android.R.layout.simple_list_item_1, remoliendaoptions)
+                    etID2.adapter = ArrayAdapter<Int>(this@ActivityRemoliendaC1, android.R.layout.simple_list_item_1, remoliendaoptions2)
+                    etID3.adapter = ArrayAdapter<Int>(this@ActivityRemoliendaC1, android.R.layout.simple_list_item_1, remoliendaoptions3)
+
+                }
+            }
+
+
+        })
+
+    }
 
 }

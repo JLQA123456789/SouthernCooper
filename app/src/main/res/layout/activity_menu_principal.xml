@@ -5,7 +5,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#fcfcfc"
-        tools:context=".ActivityMenuPrincipal">
+        tools:context=".ui.ActivityMenuPrincipal">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appbar"
@@ -21,6 +21,7 @@
                 app:expandedTitleMarginEnd="64dp"
                 app:expandedTitleMarginStart="48dp"
                 app:layout_scrollFlags="exitUntilCollapsed|scroll"
+                android:textSize="22sp"
                 app:title="Mi Menú">
 
                 <androidx.appcompat.widget.Toolbar
@@ -83,6 +84,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
                                 android:text="Mi perfil"
+                                android:textSize="10sp"
                                 android:textStyle="bold" />
 
                             <View
@@ -96,7 +98,8 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:padding="5dp"
-                                android:text="Mi cuenta"
+                                android:textSize="10sp"
+                                android:text="Configurar mi cuenta"
                                 android:textColor="@color/cian_azul" />
 
                         </LinearLayout>
@@ -129,6 +132,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
                                 android:text="Concentradora 1"
+                                android:textSize="10sp"
                                 android:textStyle="bold" />
 
                             <View
@@ -143,6 +147,7 @@
                                 android:gravity="center"
                                 android:padding="5dp"
                                 android:text="Ingresar Datos"
+                                android:textSize="10sp"
                                 android:textColor="@color/cian_azul" />
 
                         </LinearLayout>
@@ -183,6 +188,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
                                 android:text="Concentradora 2"
+                                android:textSize="10sp"
                                 android:textStyle="bold" />
 
                             <View
@@ -197,6 +203,7 @@
                                 android:gravity="center"
                                 android:padding="5dp"
                                 android:text="Ingresar Datos"
+                                android:textSize="10sp"
                                 android:textColor="@color/cian_azul" />
 
                         </LinearLayout>
@@ -229,6 +236,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
                                 android:text="Cerrar Sessión"
+                                android:textSize="10sp"
                                 android:textStyle="bold" />
 
                             <View
@@ -242,6 +250,7 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:padding="5dp"
+                                android:textSize="10sp"
                                 android:text="Proteje tus datos"
                                 android:textColor="@color/cian_azul" />
 

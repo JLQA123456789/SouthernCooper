@@ -1,8 +1,9 @@
-package com.example.southerncooper
+package com.example.southerncooper.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.southerncooper.R
 import kotlinx.android.synthetic.main.activity_register.*
 
 class ActivityRegister : AppCompatActivity() {
@@ -11,7 +12,7 @@ class ActivityRegister : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         tvGotoLogin.setOnClickListener {
-            val intent = Intent(this ,MainActivity::class.java )
+            val intent = Intent(this , MainActivity::class.java )
             startActivity(intent)
         }
     }

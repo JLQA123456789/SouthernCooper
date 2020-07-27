@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.southerncooper">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -14,17 +13,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.AnalizadoresIdActivity"></activity>
         <activity
-            android:name=".ActivityRemoliendaC1"
-            android:parentActivityName=".ActivityConcentradora1" />
-        <activity android:name=".ActivityMenuPrincipal" />
-        <activity android:name=".ActivityConcentradora1" />
-        <activity android:name=".ActivityLogin" />
+            android:name=".ui.ActivityRemoliendaC1"
+            android:parentActivityName=".ui.ActivityConcentradora1" />
+        <activity android:name=".ui.ActivityMenuPrincipal" />
+        <activity android:name=".ui.ActivityConcentradora1" />
         <activity
-            android:name=".ActivityRegister"
+            android:name=".ui.ActivityRegister"
             android:launchMode="singleInstance" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
