@@ -9,6 +9,7 @@ import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Header
 import retrofit2.http.POST
 import retrofit2.http.Query
 
@@ -23,9 +24,14 @@ interface ApiService {
     fun postLogin(@Query("email") email: String, @Query("password")password:String):
             Call<LoginResponse>
 
+    @POST("logout")
+    //Pasamos un parametro sobre la consulta eso se lleva con query
+    fun postLogout(@Header("Authorization") authHeader: String): Call<Void>
+
+
     companion object Factory{
 
-        private const val BASE_URL ="http://104.131.56.242/api/"
+        private const val BASE_URL ="http://104.131.27.228/api/"
 
         fun create(): ApiService {
 

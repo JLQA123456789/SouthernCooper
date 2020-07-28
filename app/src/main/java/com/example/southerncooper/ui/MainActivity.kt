@@ -18,6 +18,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
+@Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class MainActivity : AppCompatActivity() {
 
     private val apiService: ApiService by lazy {
@@ -31,13 +32,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val preferences=
-            PreferenceHelper.defaultPrefs(this)
-        if (preferences["session", false]) //Con esto nos asegurmaos que nos es un valor nulo
+        val preferences= PreferenceHelper.defaultPrefs(this)
+        //Almacenamos el token en preferences
+        if (preferences["jwt", ""].contains("."))
             goToMenuActivity()
 
         btnLogin.setOnClickListener {
-
 
             performLogin()
 
@@ -56,7 +56,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun performLogin(){
 
-        val call = apiService.postLogin(etEmail.text.toString(), etPassword.text.toString())
+
+        val email = etEmail.text.toString()
+        val password = etPassword.text.toString()
+
+        if (email.trim().isEmpty() || password.trim().isEmpty()){
+            toast(getString(R.string.error_empty_credentials))
+            return
+        }
+
+        val call = apiService.postLogin(email, password)
         call.enqueue(object:Callback<LoginResponse>{
             override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
 
@@ -75,6 +84,7 @@ class MainActivity : AppCompatActivity() {
                         if (loginResponse.success){
 
                             createsessionPreferences(loginResponse.jwt)
+                            toast(getString(R.string.welcome_name, loginResponse.user.name))
                             goToMenuActivity()
                         }else{
                             toast(getString(R.string.error_invalid_credentials))
@@ -92,16 +102,13 @@ class MainActivity : AppCompatActivity() {
         })
 
     }
-
-    private fun createsessionPreferences(jwt:String) {
-
-        val preferences =
-            PreferenceHelper.defaultPrefs(this)
+    //Este metodo crea una preferencia porque recibira el token y luego guardar el token....
+    private fun createsessionPreferences(jwt: String) {
+        val preferences = PreferenceHelper.defaultPrefs(this)
         preferences["jwt"] = jwt
     }
 
     private fun goToMenuActivity() {
-
         val intent = Intent(
             this,
             ActivityMenuPrincipal::class.java

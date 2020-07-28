@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.southerncooper.util
 
 import android.content.Context
