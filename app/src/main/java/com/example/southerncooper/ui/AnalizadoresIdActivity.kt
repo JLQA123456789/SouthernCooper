@@ -92,6 +92,8 @@ class AnalizadoresIdActivity : AppCompatActivity() {
                     }
 
                     MoliendaId.text =  moliendaoptions.toString().replace("[", "").replace("]", "");
+
+
                 }
             }
 
@@ -99,6 +101,7 @@ class AnalizadoresIdActivity : AppCompatActivity() {
         })
 
     }
+
 
 
     private fun loadIdQuinta(){

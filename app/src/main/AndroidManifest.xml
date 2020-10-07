@@ -9,7 +9,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_analizadores_round"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -70,6 +70,7 @@
         <!--Menu PRincipal-->
         <activity
             android:name=".ui.ActivityMenuPrincipal"
+            android:launchMode="singleInstance"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.ActivityRegister"
@@ -78,9 +79,11 @@
         <activity
             android:name=".ui.ProfileActivity"
             android:parentActivityName=".ui.ActivityMenuPrincipal"
+            android:launchMode="singleInstance"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
             android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
