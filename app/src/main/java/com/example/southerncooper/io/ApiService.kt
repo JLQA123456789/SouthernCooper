@@ -92,7 +92,7 @@ interface ApiService {
     fun storeMolienda(@Header("Authorization") authHeader: String,
 
                         @Query("name") name: String,
-                        @Query("date") date: String,
+                        @Query("scheduled_date") date: String,
                         @Query("muestra") muestra: String,
                         @Query("vertimil") vertimil: String,
                         @Query("hora") hora: String,
@@ -116,7 +116,7 @@ interface ApiService {
     fun storeQuinta(@Header("Authorization") authHeader: String,
 
                       @Query("name") name: String,
-                      @Query("date") date: String,
+                      @Query("scheduled_date") date: String,
                       @Query("muestra") muestra: String,
                       @Query("hora") hora: String,
                       @Query("identify") identify: String,
@@ -134,7 +134,7 @@ interface ApiService {
     fun storeNorte(@Header("Authorization") authHeader: String,
 
                     @Query("name") name: String,
-                    @Query("date") date: String,
+                    @Query("scheduled_date") date: String,
                     @Query("muestra") muestra: String,
                     @Query("hora") hora: String,
                     @Query("identify") identify: String,
@@ -146,7 +146,7 @@ interface ApiService {
     fun storeMoly(@Header("Authorization") authHeader: String,
 
                    @Query("name") name: String,
-                   @Query("date") date: String,
+                   @Query("scheduled_date") date: String,
                    @Query("muestra") muestra: String,
                    @Query("hora") hora: String,
                    @Query("identify") identify: String,
@@ -163,7 +163,7 @@ interface ApiService {
     fun storeRemoliendaC2(@Header("Authorization") authHeader: String,
 
                     @Query("name") name: String,
-                    @Query("date") date: String,
+                    @Query("scheduled_date") date: String,
                     @Query("muestra") muestra: String,
                     @Query("vertimil") vertimil: String,
                     @Query("hora") hora: String,
@@ -186,7 +186,7 @@ interface ApiService {
     fun storeMoliendaC2(@Header("Authorization") authHeader: String,
 
                           @Query("name") name: String,
-                          @Query("date") date: String,
+                          @Query("scheduled_date") date: String,
                           @Query("muestra") muestra: String,
                           @Query("vertimil") vertimil: String,
                           @Query("hora") hora: String,
@@ -205,7 +205,7 @@ interface ApiService {
     fun storeCobre(@Header("Authorization") authHeader: String,
 
                   @Query("name") name: String,
-                  @Query("date") date: String,
+                  @Query("scheduled_date") date: String,
                   @Query("muestra") muestra: String,
                   @Query("hora") hora: String,
                   @Query("identify") identify: String,
