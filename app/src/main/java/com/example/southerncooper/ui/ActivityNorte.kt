@@ -77,11 +77,21 @@ class ActivityNorte : AppCompatActivity() {
                 }
 
                 else -> { // Note the block
-                    stateProgressBar.setAllStatesCompleted(true)
-                    Step4_norte.visibility = View.GONE
-                    Step5_norte.visibility = View.VISIBLE
-                    button.visibility = View.GONE
-                    button2.visibility = View.GONE
+
+                    if (btnConfirmedNorte.isClickable == true ){
+
+                        toast("Lo siento pero no guardaste")
+                        stateProgressBar.setAllStatesCompleted(false)
+                        Step4_norte.visibility = View.VISIBLE
+                        Step5_norte.visibility = View.GONE
+                    } else{
+                        stateProgressBar.setAllStatesCompleted(true)
+                        Step4_norte.visibility = View.GONE
+                        Step5_norte.visibility = View.VISIBLE
+                        button.visibility = View.GONE
+                        button2.visibility = View.GONE
+                    }
+
                 }
             }
 

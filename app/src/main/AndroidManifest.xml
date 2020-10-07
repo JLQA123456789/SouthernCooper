@@ -14,44 +14,79 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.ActivityNorte"></activity>
+
+
         <activity
-            android:name=".ui.ActivityMolienda2"
-            android:parentActivityName=".ui.ActivityConcentradora2" />
+            android:name=".ui.ActivityConcentradora2"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".ui.ActivityMenuPrincipal"
+            />
         <activity
             android:name=".ui.AnalizadoresIdActivityC2"
-            android:parentActivityName=".ui.ActivityConcentradora2" />
+            android:launchMode="singleInstance"
+            android:parentActivityName=".ui.ActivityConcentradora2"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
         <activity
             android:name=".ui.ActivityRemoliendaC2"
             android:parentActivityName=".ui.ActivityConcentradora2" />
+
         <activity
-            android:name=".ui.ActivityConcentradora2"
-            android:parentActivityName=".ui.ActivityMenuPrincipal" />
+            android:name=".ui.ActivityMolienda2"
+            android:parentActivityName=".ui.ActivityConcentradora2" />
+
+
+        <activity
+            android:name=".ui.ActivityConcentradora1"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".ui.ActivityMenuPrincipal"
+            />
+
+        <activity
+
+            android:name=".ui.AnalizadoresIdActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".ui.ActivityConcentradora1"
+            />
+        <activity
+            android:name=".ui.ActivityRemoliendaC1"
+            android:parentActivityName=".ui.ActivityConcentradora1"
+            />
         <activity
             android:name=".ui.ActivityQuintaC1"
             android:parentActivityName=".ui.ActivityConcentradora1" />
         <activity
             android:name=".ui.ActivityMoliendaC1"
             android:parentActivityName=".ui.ActivityConcentradora1" />
-        <activity
-            android:name=".ui.ProfileActivity"
-            android:parentActivityName=".ui.ActivityMenuPrincipal" />
-        <activity
-            android:name=".ui.AnalizadoresIdActivity"
-            android:parentActivityName=".ui.ActivityConcentradora1" />
-        <activity
-            android:name=".ui.ActivityRemoliendaC1"
-            android:parentActivityName=".ui.ActivityConcentradora1" />
-        <activity android:name=".ui.ActivityMenuPrincipal" />
-        <activity
-            android:name=".ui.ActivityConcentradora1"
-            android:parentActivityName=".ui.ActivityMenuPrincipal" />
+
+        <activity android:name=".ui.ActivityNorte"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".ui.ActivityConcentradora1"
+            />
+
+        <activity android:name=".ui.ActivityMenuPrincipal"
+            android:theme="@style/AppTheme.NoActionBar"
+
+            />
+
         <activity
             android:name=".ui.ActivityRegister"
+            android:theme="@style/AppTheme.NoActionBar"
             android:launchMode="singleInstance" />
+
+        <activity
+            android:name=".ui.ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".ui.ActivityMenuPrincipal"
+            />
+
         <activity
             android:name=".ui.MainActivity"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

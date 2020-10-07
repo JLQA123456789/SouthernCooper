@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SouthernCooper</string>
+    <string name="app_name">Control de Procesos</string>
     <string name="label_email">Correo</string>
     <string name="label_password">Contraseña</string>
     <string name="label_go_to_register">Crear una cuenta ? Regístrate</string>

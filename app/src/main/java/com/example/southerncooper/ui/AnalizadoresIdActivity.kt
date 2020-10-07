@@ -31,9 +31,11 @@ class AnalizadoresIdActivity : AppCompatActivity() {
         setContentView(R.layout.activity_analizadores_id)
 
 
+
         btnprevius.setOnClickListener{
             val intent = Intent(this, ActivityConcentradora1::class.java)
             startActivity(intent)
+
         }
 
         loadIdRemolienda()

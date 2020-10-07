@@ -191,7 +191,7 @@ interface ApiService {
 
     companion object Factory{
 
-        private const val BASE_URL ="http://161.35.228.11/api/"
+        private const val BASE_URL ="http://64.227.107.185/api/"
 
         fun create(): ApiService {
 
