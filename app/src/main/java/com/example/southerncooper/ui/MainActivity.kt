@@ -3,6 +3,7 @@ package com.example.southerncooper.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import com.example.southerncooper.util.PreferenceHelper
 import kotlinx.android.synthetic.main.activity_main.*
@@ -13,6 +14,7 @@ import com.example.southerncooper.io.ApiService
 import com.example.southerncooper.io.Response.LoginResponse
 import com.example.southerncooper.util.toast
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.iid.FirebaseInstanceId
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -31,6 +33,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        
+
 
         val preferences= PreferenceHelper.defaultPrefs(this)
         //Almacenamos el token en preferences
@@ -75,7 +80,7 @@ class MainActivity : AppCompatActivity() {
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
 
                     if (response.isSuccessful){//{200..300}
-                        val loginResponse =response.body()
+                        val loginResponse = response.body()
                         if (loginResponse == null){
 
                             toast(getString(R.string.error_login_response))
@@ -85,7 +90,7 @@ class MainActivity : AppCompatActivity() {
 
                             createsessionPreferences(loginResponse.jwt)
                             toast(getString(R.string.welcome_name, loginResponse.user.name))
-                            goToMenuActivity()
+                            goToMenuActivity(true)
                         }else{
                             toast(getString(R.string.error_invalid_credentials))
 
@@ -108,11 +113,16 @@ class MainActivity : AppCompatActivity() {
         preferences["jwt"] = jwt
     }
 
-    private fun goToMenuActivity() {
+    private fun goToMenuActivity(isUserInput: Boolean = false) {
         val intent = Intent(
             this,
             ActivityMenuPrincipal::class.java
         )//Se pone .java porque itent es un clase de  java
+
+        if (isUserInput) {
+            intent.putExtra("store_token", true)
+        }
+
         startActivity(intent)
         finish()
     }

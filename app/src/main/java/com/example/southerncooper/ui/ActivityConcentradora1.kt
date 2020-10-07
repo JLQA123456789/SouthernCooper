@@ -21,5 +21,21 @@ class ActivityConcentradora1 : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btnMolienda.setOnClickListener{
+            val intent = Intent(this, ActivityMoliendaC1::class.java)
+            startActivity(intent)
+        }
+
+        btnQuinta.setOnClickListener{
+            val intent = Intent(this, ActivityQuintaC1::class.java)
+            startActivity(intent)
+        }
+
+        btnNorte.setOnClickListener{
+            val intent = Intent(this, ActivityNorte::class.java)
+            startActivity(intent)
+        }
+
+
     }
 }

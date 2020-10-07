@@ -6,7 +6,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/Step4"
+    android:id="@+id/Step4_quinta"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:cardCornerRadius="8dp"
@@ -19,7 +19,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="10dp"
-    android:text="Confirmar Muestra de Remolienda"
+    android:text="Confirmar Muestra de Quinta Sec"
     android:textStyle="bold"
     android:textSize="15sp"
     android:textAlignment="center"
@@ -50,7 +50,7 @@
                     app:cardElevation="8dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:id="@+id/cardviewonesuccesful"
+                    android:id="@+id/cardviewonesuccesful_quinta"
                     app:contentPadding="12dp">
 
 
@@ -84,7 +84,7 @@
 
 
                         <TextView
-                            android:id="@+id/tvConfirmName"
+                            android:id="@+id/tvConfirmName_quinta"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -108,7 +108,7 @@
 
 
                         <TextView
-                            android:id="@+id/tvConfirmDate"
+                            android:id="@+id/tvConfirmDate_quinta"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -132,7 +132,7 @@
 
 
                         <TextView
-                            android:id="@+id/tvConfirmMuestra"
+                            android:id="@+id/tvConfirmMuestra_quinta"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -141,28 +141,6 @@
                     </LinearLayout>
 
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:orientation="horizontal">
-
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Vertimil" />
-
-
-                        <TextView
-                            android:id="@+id/tvConfirmVertimil"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            tools:text="2" />
-
-                    </LinearLayout>
 
 
                     <LinearLayout
@@ -181,7 +159,7 @@
 
 
                         <TextView
-                            android:id="@+id/tvConfirmTime"
+                            android:id="@+id/tvConfirmTime_quinta"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -206,7 +184,7 @@
 
 
                         <TextView
-                            android:id="@+id/tvConfirmID"
+                            android:id="@+id/tvConfirmID_quinta"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -230,7 +208,7 @@
 
 
                         <TextView
-                            android:id="@+id/tvConfirmAVE"
+                            android:id="@+id/tvConfirmAVE_quinta"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -255,7 +233,7 @@
 
 
                         <TextView
-                            android:id="@+id/tvConfirmSD"
+                            android:id="@+id/tvConfirmSD_quinta"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -264,29 +242,9 @@
                     </LinearLayout>
 
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:orientation="horizontal">
 
 
-                        <TextView
 
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Density" />
-
-
-                        <TextView
-                            android:id="@+id/tvConfirmDensity"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            tools:text="3.5" />
-
-                    </LinearLayout>
 
 
                     <LinearLayout
@@ -301,35 +259,11 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Sólido Puro" />
+                            android:text="%M+48" />
 
 
                         <TextView
-                            android:id="@+id/tvConfirmSolidoPuro"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            tools:text="4.5" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:orientation="horizontal">
-
-
-                        <TextView
-
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="%M+200" />
-
-
-                        <TextView
-                            android:id="@+id/tvConfirmM200"
+                            android:id="@+id/tvConfirmM48_quinta"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -349,11 +283,11 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="%M+400" />
+                            android:text="%M+65" />
 
 
                         <TextView
-                            android:id="@+id/tvConfirmM400"
+                            android:id="@+id/tvConfirmM65_quinta"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -363,7 +297,7 @@
 
 
                         <Button
-                            android:id="@+id/btnConfirmedRemo1"
+                            android:id="@+id/btnConfirmedRemo1_quinta"
                             android:layout_width="278dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="25dp"
@@ -397,7 +331,7 @@
                     app:cardElevation="8dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:id="@+id/cardviewonesuccesful2"
+                    android:id="@+id/cardviewonesuccesful2_quinta"
                     app:contentPadding="12dp">
 
 
@@ -433,7 +367,7 @@
 
 
                     <TextView
-                        android:id="@+id/tvConfirmMuestra2"
+                        android:id="@+id/tvConfirmMuestra2_quinta"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -442,28 +376,7 @@
                 </LinearLayout>
 
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:orientation="horizontal">
 
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Vertimil" />
-
-
-                    <TextView
-                        android:id="@+id/tvConfirmVertimil2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        tools:text="2" />
-
-                </LinearLayout>
 
 
                 <LinearLayout
@@ -482,7 +395,7 @@
 
 
                     <TextView
-                        android:id="@+id/tvConfirmTime2"
+                        android:id="@+id/tvConfirmTime2_quinta"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -507,7 +420,7 @@
 
 
                     <TextView
-                        android:id="@+id/tvConfirmID2"
+                        android:id="@+id/tvConfirmID2_quinta"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -531,7 +444,7 @@
 
 
                     <TextView
-                        android:id="@+id/tvConfirmAVE2"
+                        android:id="@+id/tvConfirmAVE2_quinta"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -556,7 +469,7 @@
 
 
                     <TextView
-                        android:id="@+id/tvConfirmSD2"
+                        android:id="@+id/tvConfirmSD2_quinta"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -565,29 +478,7 @@
                 </LinearLayout>
 
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:orientation="horizontal">
 
-
-                    <TextView
-
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Density" />
-
-
-                    <TextView
-                        android:id="@+id/tvConfirmDensity2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        tools:text="3.5"/>
-
-                </LinearLayout>
 
 
                 <LinearLayout
@@ -602,35 +493,11 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Sólido Puro" />
+                        android:text="%M+48" />
 
 
                     <TextView
-                        android:id="@+id/tvConfirmSolidoPuro2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        tools:text="4.5"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:orientation="horizontal">
-
-
-                    <TextView
-
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="%M+200" />
-
-
-                    <TextView
-                        android:id="@+id/tvConfirmM2002"
+                        android:id="@+id/tvConfirmM482_quinta"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -650,11 +517,11 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="%M+400" />
+                        android:text="%M+65" />
 
 
                     <TextView
-                        android:id="@+id/tvConfirmM4002"
+                        android:id="@+id/tvConfirmM652_quinta"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -663,7 +530,7 @@
                 </LinearLayout>
 
                     <Button
-                        android:id="@+id/btnConfirmedRemo2"
+                        android:id="@+id/btnConfirmedRemo2_quinta"
                         android:layout_width="278dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="25dp"
@@ -698,7 +565,7 @@
                     app:cardElevation="8dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:id="@+id/cardviewonesuccesful3"
+                    android:id="@+id/cardviewonesuccesful3_quinta"
                     app:contentPadding="12dp">
 
 
@@ -735,7 +602,7 @@
 
 
                                 <TextView
-                                    android:id="@+id/tvConfirmMuestra3"
+                                    android:id="@+id/tvConfirmMuestra3_quinta"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -744,28 +611,7 @@
                             </LinearLayout>
 
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:orientation="horizontal">
 
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="Vertimil" />
-
-
-                                <TextView
-                                    android:id="@+id/tvConfirmVertimil3"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    tools:text="2" />
-
-                            </LinearLayout>
 
 
                             <LinearLayout
@@ -784,7 +630,7 @@
 
 
                                 <TextView
-                                    android:id="@+id/tvConfirmTime3"
+                                    android:id="@+id/tvConfirmTime3_quinta"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -809,7 +655,7 @@
 
 
                                 <TextView
-                                    android:id="@+id/tvConfirmID3"
+                                    android:id="@+id/tvConfirmID3_quinta"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -833,7 +679,7 @@
 
 
                                 <TextView
-                                    android:id="@+id/tvConfirmAVE3"
+                                    android:id="@+id/tvConfirmAVE3_quinta"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -858,7 +704,7 @@
 
 
                                 <TextView
-                                    android:id="@+id/tvConfirmSD3"
+                                    android:id="@+id/tvConfirmSD3_quinta"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -867,29 +713,6 @@
                             </LinearLayout>
 
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:orientation="horizontal">
-
-
-                                <TextView
-
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:text="Density" />
-
-
-                                <TextView
-                                    android:id="@+id/tvConfirmDensity3"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    tools:text="3.5"/>
-
-                            </LinearLayout>
 
 
                             <LinearLayout
@@ -904,35 +727,11 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="Sólido Puro" />
+                                    android:text="%M+48" />
 
 
                                 <TextView
-                                    android:id="@+id/tvConfirmSolidoPuro3"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    tools:text="4.5"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:orientation="horizontal">
-
-
-                                <TextView
-
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="%M+200" />
-
-
-                                <TextView
-                                    android:id="@+id/tvConfirmM2003"
+                                    android:id="@+id/tvConfirmM483_quinta"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -952,11 +751,11 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="%M+400" />
+                                    android:text="%M+65" />
 
 
                                 <TextView
-                                    android:id="@+id/tvConfirmM4003"
+                                    android:id="@+id/tvConfirmM653_quinta"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -965,7 +764,7 @@
                             </LinearLayout>
 
                             <Button
-                                android:id="@+id/btnConfirmedRemo3"
+                                android:id="@+id/btnConfirmedRemo3_quinta"
                                 android:layout_width="278dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="25dp"
@@ -997,7 +796,7 @@
 
 
     <Button
-        android:id="@+id/btnRegresarMenu"
+        android:id="@+id/btnRegresarMenu_quinta"
         android:layout_width="278dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="637dp"

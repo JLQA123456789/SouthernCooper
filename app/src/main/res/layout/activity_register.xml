@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.ActivityRegister">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/registerlayaout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ActivityRegister">
 
 
         <RelativeLayout
@@ -19,6 +20,7 @@
                 android:paddingLeft="60dp"
                 android:paddingRight="60dp">
                 <LinearLayout
+                    android:layout_marginTop="35dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -31,10 +33,39 @@
                         <ImageView
                             android:layout_width="20dp"
                             android:layout_height="20dp"
+                            android:src="@drawable/usrusr"
+                            android:layout_gravity="center"/>
+                        <EditText
+                            android:id="@+id/etNameRegister"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/label_name"
+                            android:textColorHint="@color/BlackGloss"
+                            android:layout_marginLeft="15dp"
+                            android:background="@color/backgroundWhite"
+                            android:letterSpacing="0.1"
+                            android:textSize="16dp"
+                            android:inputType="text"
+                            android:textColor="@color/BlackGloss"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/cian_azul"></LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
                             android:src="@drawable/message"
                             android:layout_gravity="center"/>
                         <EditText
-                            android:id="@+id/mail"
+                            android:id="@+id/etEmailRegister"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/label_email_new"
@@ -59,21 +90,24 @@
                         <ImageView
                             android:layout_width="20dp"
                             android:layout_height="20dp"
-                            android:src="@drawable/usrusr"
+                            android:src="@drawable/pswrd"
                             android:layout_gravity="center"/>
-                        <EditText
-                            android:id="@+id/usrusr"
+
+                        <com.maksim88.passwordedittext.PasswordEditText
+                            android:id="@+id/etPasswordRegister"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/label_name"
+                            android:hint="Contraseña"
+                            app:pet_hoverShowsPw="true"
                             android:textColorHint="@color/BlackGloss"
                             android:layout_marginLeft="15dp"
                             android:background="@color/backgroundWhite"
+                            android:inputType="textPassword"
                             android:letterSpacing="0.1"
                             android:textSize="16dp"
-                            android:inputType="text"
                             android:textColor="@color/BlackGloss"
                             />
+
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -90,10 +124,10 @@
                             android:src="@drawable/pswrd"
                             android:layout_gravity="center"/>
                         <EditText
-                            android:id="@+id/pswrdd"
+                            android:id="@+id/etPasswordConfirmation"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Password"
+                            android:hint="Confirmar Contraseña "
                             android:textColorHint="@color/BlackGloss"
                             android:layout_marginLeft="15dp"
                             android:background="@color/backgroundWhite"
@@ -118,10 +152,10 @@
                             android:src="@drawable/phonemo"
                             android:layout_gravity="center"/>
                         <EditText
-                            android:id="@+id/mobphone"
+                            android:id="@+id/etPhoneRegister"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Mobile Number"
+                            android:hint="Número Celular"
                             android:textColorHint="@color/BlackGloss"
                             android:layout_marginLeft="15dp"
                             android:background="@color/backgroundWhite"
@@ -146,8 +180,9 @@
                 android:orientation="vertical"
                 android:gravity="bottom"
                 android:layout_marginBottom="20dp">
-                <TextView
-                    android:id="@+id/sup"
+
+                <Button
+                    android:id="@+id/RegisterConfirmation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/BlackGloss"
@@ -159,21 +194,24 @@
                     android:padding="16dp"
                     android:layout_marginBottom="50dp"
                     android:letterSpacing="0.2"/>
+
                 <TextView
                     android:id="@+id/tvGotoLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-
                     android:text="¿Ya tienes una cuenta?"
                     android:textColor="@color/BlackGloss"
                     android:letterSpacing="0.1"/>
             </LinearLayout>
+
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:layout_marginBottom="400dp">
+                android:layout_marginBottom="450dp">
 
                 <ImageView
                     android:layout_width="332dp"

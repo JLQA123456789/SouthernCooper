@@ -23,5 +23,17 @@
     <string name="error_invalid_credentials">Las credenciales son incorrectas</string>
     <string name="welcome_name">Bienvenido %1$s</string>
     <string name="error_empty_credentials">Por favor ingrese un correo y una contraseña</string>
+    <string name="complete_register_now">Por favor completar todos los campos</string>
+    <string name="error_password_register">Las contraseñas no coinciden</string>
+    <string name="error_response_server">Se otuvo una respuesta inesperada del servidor</string>
+    <string name="error_register_validation">Ocurrió un error en el registro</string>
+    <string name="default_notification_channel_id">default_channel</string>
+    <string name="edit_profile">Editar Perfil</string>
+    <string name="Edit_phone">Celular</string>
+    <string name="Edit_cargo">Cargo</string>
+    <string name="Save_profile">Guardar Datos</string>
+    <string name="edit_password">Contraseña</string>
+    <string name="profile_success_message">Los cambios sean guardado correctamente</string>
+    <string name="error_profile_name">El nombre ingresado es demasiado corto</string>
 
 </resources>

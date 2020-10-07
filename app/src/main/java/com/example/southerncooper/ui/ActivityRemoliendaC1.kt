@@ -16,7 +16,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.southerncooper.R
 import com.example.southerncooper.io.ApiService
+import com.example.southerncooper.io.Response.SimpleResponse
 import com.example.southerncooper.model.Remolienda
+import com.example.southerncooper.util.PreferenceHelper
+import com.example.southerncooper.util.PreferenceHelper.get
+import com.example.southerncooper.util.toast
 import com.github.chrisbanes.photoview.PhotoView
 import kotlinx.android.synthetic.main.activity_analizadores_id.*
 import kotlinx.android.synthetic.main.activity_remolienda_c1.*
@@ -29,8 +33,13 @@ import java.util.*
 class ActivityRemoliendaC1 : AppCompatActivity() {
 
 
+
     private val apiService: ApiService by lazy{
         ApiService.create()
+    }
+
+    private val preferences by lazy {
+        PreferenceHelper.defaultPrefs(this)
     }
 
     private var photoView:PhotoView?=null
@@ -163,14 +172,22 @@ class ActivityRemoliendaC1 : AppCompatActivity() {
         }
 
         btnConfirmedRemo1.setOnClickListener{
-            Toast.makeText(this, "La muestra se ha registrado correctamente", Toast.LENGTH_SHORT).show()
-            finish()
+
+            performStoreRemolienda()
         }
 
-//        btnConfirmedRemo1.setOnClickListener{
-//            Toast.makeText(this, "La muestra se ha registrado correctamente", Toast.LENGTH_SHORT).show()
-//            finish()
-//        }
+        btnConfirmedRemo2.setOnClickListener{
+
+            performStoreRemolienda()
+        }
+
+        btnConfirmedRemo3.setOnClickListener{
+
+            performStoreRemolienda()
+        }
+        btnRegresarMenu.setOnClickListener{
+            finish()
+        }
 
 
         val MuestraOptions = arrayOf("L2-2A", "L2-2B", "L2-2C")
@@ -185,7 +202,6 @@ class ActivityRemoliendaC1 : AppCompatActivity() {
         loadIdRemolienda()
 
     }
-
 
     private fun openCamera() {
         val values = ContentValues()
@@ -375,42 +391,43 @@ override fun onBackPressed(){
 
     private fun showRemoliendaDataToConfirm(){
 
-        tvConfirmName.text =etName.text.toString()
-        tvConfirmDate.text = etDate.text.toString()
-        tvConfirmMuestra.text = spinnerMuestra.selectedItem.toString()
-        tvConfirmVertimil.text = etVertimil.text.toString()
-        tvConfirmTime.text = etTime.text.toString()
-        tvConfirmID.text = etID.selectedItem.toString()
-        tvConfirmAVE.text = etAVE.text.toString()
-        tvConfirmSD.text = etSD.text.toString()
-        tvConfirmDensity.text = etDensity.text.toString()
-        tvConfirmSolidoPuro.text = etSolidoPuro.text.toString()
-        tvConfirmM200.text = etm200.text.toString()
-        tvConfirmM400.text =etm400.text.toString()
+            tvConfirmName.text =etName.text.toString()
+            tvConfirmDate.text = etDate.text.toString()
+            tvConfirmMuestra.text = spinnerMuestra.selectedItem.toString()
+            tvConfirmVertimil.text = etVertimil.text.toString()
+            tvConfirmTime.text = etTime.text.toString()
+            tvConfirmID.text = etID.selectedItem.toString()
+            tvConfirmAVE.text = etAVE.text.toString()
+            tvConfirmSD.text = etSD.text.toString()
+            tvConfirmDensity.text = etDensity.text.toString()
+            tvConfirmSolidoPuro.text = etSolidoPuro.text.toString()
+            tvConfirmM200.text = etm200.text.toString()
+            tvConfirmM400.text =etm400.text.toString()
+
+            tvConfirmMuestra2.text = spinnerMuestra2.selectedItem.toString()
+            tvConfirmVertimil2.text = etVertimil2.text.toString()
+            tvConfirmTime2.text = etTime2.text.toString()
+            tvConfirmID2.text = etID2.selectedItem.toString()
+            tvConfirmAVE2.text = etAVE2.text.toString()
+            tvConfirmSD2.text = etSD2.text.toString()
+            tvConfirmDensity2.text = etDensity2.text.toString()
+            tvConfirmSolidoPuro2.text = etSolidoPuro2.text.toString()
+            tvConfirmM2002.text = etm2002.text.toString()
+            tvConfirmM4002.text =etm4002.text.toString()
 
 
-        tvConfirmMuestra2.text = spinnerMuestra2.selectedItem.toString()
-        tvConfirmVertimil2.text = etVertimil2.text.toString()
-        tvConfirmTime2.text = etTime2.text.toString()
-        tvConfirmID2.text = etID2.selectedItem.toString()
-        tvConfirmAVE2.text = etAVE2.text.toString()
-        tvConfirmSD2.text = etSD2.text.toString()
-        tvConfirmDensity2.text = etDensity2.text.toString()
-        tvConfirmSolidoPuro2.text = etSolidoPuro2.text.toString()
-        tvConfirmM2002.text = etm2002.text.toString()
-        tvConfirmM4002.text =etm4002.text.toString()
+            tvConfirmMuestra3.text = spinnerMuestra3.selectedItem.toString()
+            tvConfirmVertimil3.text = etVertimil3.text.toString()
+            tvConfirmTime3.text = etTime3.text.toString()
+            tvConfirmID3.text = etID3.selectedItem.toString()
+            tvConfirmAVE3.text = etAVE3.text.toString()
+            tvConfirmSD3.text = etSD3.text.toString()
+            tvConfirmDensity3.text = etDensity3.text.toString()
+            tvConfirmSolidoPuro3.text = etSolidoPuro3.text.toString()
+            tvConfirmM2003.text = etm2003.text.toString()
+            tvConfirmM4003.text =etm4003.text.toString()
 
 
-        tvConfirmMuestra3.text = spinnerMuestra3.selectedItem.toString()
-        tvConfirmVertimil3.text = etVertimil3.text.toString()
-        tvConfirmTime3.text = etTime3.text.toString()
-        tvConfirmID3.text = etID3.selectedItem.toString()
-        tvConfirmAVE3.text = etAVE3.text.toString()
-        tvConfirmSD3.text = etSD3.text.toString()
-        tvConfirmDensity3.text = etDensity3.text.toString()
-        tvConfirmSolidoPuro3.text = etSolidoPuro3.text.toString()
-        tvConfirmM2003.text = etm2003.text.toString()
-        tvConfirmM4003.text =etm4003.text.toString()
 
 
     }
@@ -440,12 +457,12 @@ override fun onBackPressed(){
 
                     val remolienda2 = response.body()
                     val remoliendaoptions2 = ArrayList<Int>()
-                    remolienda?.forEach {
+                    remolienda2?.forEach {
                         remoliendaoptions2.add(it.identify + 2)
                     }
                     val remolienda3 = response.body()
                     val remoliendaoptions3 = ArrayList<Int>()
-                    remolienda?.forEach {
+                    remolienda3?.forEach {
                         remoliendaoptions3.add(it.identify + 3)
                     }
 
@@ -462,5 +479,172 @@ override fun onBackPressed(){
         })
 
     }
+
+
+    private fun performStoreRemolienda(){
+
+      if (btnConfirmedRemo1.isClickable){
+
+          btnConfirmedRemo1.isClickable = false
+
+          val jwt = preferences["jwt", ""]
+          val authHeader =  "Bearer $jwt"
+          val name = etName.text.toString()
+          val date = etDate.text.toString()
+          val muestra =  spinnerMuestra.selectedItem.toString()
+          val vertimil = etVertimil.text.toString()
+          val hora = etTime.text.toString()
+          val identify = etID.selectedItem.toString()
+          val ave = etAVE.text.toString()
+          val sd = etSD.text.toString()
+          val density = etDensity.text.toString()
+          val solidopuro = etSolidoPuro.text.toString()
+          val m200 = etm200.text.toString()
+          val m400 = etm400.text.toString()
+
+
+
+          val call = apiService.storeRemolienda(
+              authHeader, name,
+              date, muestra, vertimil, hora,
+              identify, ave, sd, density,
+              solidopuro, m200, m400
+          )
+          call.enqueue(object: Callback<SimpleResponse>{
+              override fun onFailure(call: Call<SimpleResponse>, t: Throwable) {
+                  toast(t.localizedMessage)
+                  btnConfirmedRemo1.isClickable = true
+              }
+
+              override fun onResponse(
+                  call: Call<SimpleResponse>,
+                  response: Response<SimpleResponse>
+              ) {
+                  if (response.isSuccessful)
+                  {
+                      toast("Muestra registrada correctamente")
+                      //finish()
+                  } else {
+                      toast("Ocurrió un error inesperado registrando la muestra")
+                      btnConfirmedRemo1.isClickable = true
+
+                  }
+
+              }
+
+
+          })
+
+      }
+
+
+      else if (btnConfirmedRemo2.isClickable){
+
+        btnConfirmedRemo2.isClickable = false
+
+            val jwt = preferences["jwt", ""]
+            val authHeader =  "Bearer $jwt"
+            val name = etName.text.toString()
+            val date = etDate.text.toString()
+            val muestra =  spinnerMuestra2.selectedItem.toString()
+            val vertimil = etVertimil2.text.toString()
+            val hora = etTime2.text.toString()
+            val identify = etID2.selectedItem.toString()
+            val ave = etAVE2.text.toString()
+            val sd = etSD2.text.toString()
+            val density = etDensity2.text.toString()
+            val solidopuro = etSolidoPuro2.text.toString()
+            val m200 = etm2002.text.toString()
+            val m400 = etm4002.text.toString()
+
+
+
+            val call = apiService.storeRemolienda(
+                authHeader, name,
+                date, muestra, vertimil, hora,
+                identify, ave, sd, density,
+                solidopuro, m200, m400
+            )
+            call.enqueue(object: Callback<SimpleResponse>{
+                override fun onFailure(call: Call<SimpleResponse>, t: Throwable) {
+                    toast(t.localizedMessage)
+                    btnConfirmedRemo1.isClickable = true
+                }
+
+                override fun onResponse(
+                    call: Call<SimpleResponse>,
+                    response: Response<SimpleResponse>
+                ) {
+                    if (response.isSuccessful)
+                    {
+                        toast("Muestra registrada correctamente")
+                        //finish()
+                    } else {
+                        toast("Ocurrió un error inesperado registrando la muestra")
+                        btnConfirmedRemo1.isClickable = true
+
+                    }
+
+                }
+
+
+            })
+
+
+        }
+
+      else {
+          btnConfirmedRemo3.isClickable = false
+
+          val jwt = preferences["jwt", ""]
+          val authHeader = "Bearer $jwt"
+          val name = etName.text.toString()
+          val date = etDate.text.toString()
+          val muestra = spinnerMuestra3.selectedItem.toString()
+          val vertimil = etVertimil3.text.toString()
+          val hora = etTime3.text.toString()
+          val identify = etID3.selectedItem.toString()
+          val ave = etAVE3.text.toString()
+          val sd = etSD3.text.toString()
+          val density = etDensity3.text.toString()
+          val solidopuro = etSolidoPuro3.text.toString()
+          val m200 = etm2003.text.toString()
+          val m400 = etm4003.text.toString()
+
+
+          val call = apiService.storeRemolienda(
+              authHeader, name,
+              date, muestra, vertimil, hora,
+              identify, ave, sd, density,
+              solidopuro, m200, m400
+          )
+          call.enqueue(object : Callback<SimpleResponse> {
+              override fun onFailure(call: Call<SimpleResponse>, t: Throwable) {
+                  toast(t.localizedMessage)
+                  btnConfirmedRemo1.isClickable = true
+              }
+
+              override fun onResponse(
+                  call: Call<SimpleResponse>,
+                  response: Response<SimpleResponse>
+              ) {
+                  if (response.isSuccessful) {
+                      toast("Muestra registrada correctamente")
+                      //finish()
+                  } else {
+                      toast("Ocurrió un error inesperado registrando la muestra")
+                      btnConfirmedRemo1.isClickable = true
+
+                  }
+
+              }
+
+
+          })
+
+      }
+
+    }
+
 
 }

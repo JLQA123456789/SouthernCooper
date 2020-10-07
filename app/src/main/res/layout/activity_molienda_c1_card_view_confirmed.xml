@@ -6,7 +6,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/Step4"
+    android:id="@+id/Step4_molienda"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:cardCornerRadius="8dp"
@@ -19,7 +19,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="10dp"
-    android:text="Confirmar Muestra de Remolienda"
+    android:text="Confirmar Muestra de Molienda"
     android:textStyle="bold"
     android:textSize="15sp"
     android:textAlignment="center"
@@ -50,7 +50,7 @@
                     app:cardElevation="8dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:id="@+id/cardviewonesuccesful"
+                    android:id="@+id/cardviewonesuccesful_molienda"
                     app:contentPadding="12dp">
 
 
@@ -84,7 +84,7 @@
 
 
                         <TextView
-                            android:id="@+id/tvConfirmName"
+                            android:id="@+id/tvConfirmName_molienda"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -108,7 +108,7 @@
 
 
                         <TextView
-                            android:id="@+id/tvConfirmDate"
+                            android:id="@+id/tvConfirmDate_molienda"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -132,7 +132,7 @@
 
 
                         <TextView
-                            android:id="@+id/tvConfirmMuestra"
+                            android:id="@+id/tvConfirmMuestra_molienda"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -156,7 +156,7 @@
 
 
                         <TextView
-                            android:id="@+id/tvConfirmVertimil"
+                            android:id="@+id/tvConfirmVertimil_molienda"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -181,7 +181,7 @@
 
 
                         <TextView
-                            android:id="@+id/tvConfirmTime"
+                            android:id="@+id/tvConfirmTime_molienda"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -206,7 +206,7 @@
 
 
                         <TextView
-                            android:id="@+id/tvConfirmID"
+                            android:id="@+id/tvConfirmID_molienda"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -230,7 +230,7 @@
 
 
                         <TextView
-                            android:id="@+id/tvConfirmAVE"
+                            android:id="@+id/tvConfirmAVE_molienda"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -255,7 +255,7 @@
 
 
                         <TextView
-                            android:id="@+id/tvConfirmSD"
+                            android:id="@+id/tvConfirmSD_molienda"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -280,7 +280,7 @@
 
 
                         <TextView
-                            android:id="@+id/tvConfirmDensity"
+                            android:id="@+id/tvConfirmDensity_molienda"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -305,7 +305,7 @@
 
 
                         <TextView
-                            android:id="@+id/tvConfirmSolidoPuro"
+                            android:id="@+id/tvConfirmSolidoPuro_molienda"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -329,7 +329,7 @@
 
 
                         <TextView
-                            android:id="@+id/tvConfirmM200"
+                            android:id="@+id/tvConfirmM200_molienda"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -353,7 +353,7 @@
 
 
                         <TextView
-                            android:id="@+id/tvConfirmM400"
+                            android:id="@+id/tvConfirmM400_molienda"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -363,7 +363,7 @@
 
 
                         <Button
-                            android:id="@+id/btnConfirmedRemo1"
+                            android:id="@+id/btnConfirmedRemo1_molienda"
                             android:layout_width="278dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="25dp"
@@ -397,7 +397,7 @@
                     app:cardElevation="8dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:id="@+id/cardviewonesuccesful2"
+                    android:id="@+id/cardviewonesuccesful2_molienda"
                     app:contentPadding="12dp">
 
 
@@ -433,7 +433,7 @@
 
 
                     <TextView
-                        android:id="@+id/tvConfirmMuestra2"
+                        android:id="@+id/tvConfirmMuestra2_molienda"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -457,7 +457,7 @@
 
 
                     <TextView
-                        android:id="@+id/tvConfirmVertimil2"
+                        android:id="@+id/tvConfirmVertimil2_molienda"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -482,7 +482,7 @@
 
 
                     <TextView
-                        android:id="@+id/tvConfirmTime2"
+                        android:id="@+id/tvConfirmTime2_molienda"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -507,7 +507,7 @@
 
 
                     <TextView
-                        android:id="@+id/tvConfirmID2"
+                        android:id="@+id/tvConfirmID2_molienda"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -531,7 +531,7 @@
 
 
                     <TextView
-                        android:id="@+id/tvConfirmAVE2"
+                        android:id="@+id/tvConfirmAVE2_molienda"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -556,7 +556,7 @@
 
 
                     <TextView
-                        android:id="@+id/tvConfirmSD2"
+                        android:id="@+id/tvConfirmSD2_molienda"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -581,7 +581,7 @@
 
 
                     <TextView
-                        android:id="@+id/tvConfirmDensity2"
+                        android:id="@+id/tvConfirmDensity2_molienda"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -606,7 +606,7 @@
 
 
                     <TextView
-                        android:id="@+id/tvConfirmSolidoPuro2"
+                        android:id="@+id/tvConfirmSolidoPuro2_molienda"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -630,7 +630,7 @@
 
 
                     <TextView
-                        android:id="@+id/tvConfirmM2002"
+                        android:id="@+id/tvConfirmM2002_molienda"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -654,7 +654,7 @@
 
 
                     <TextView
-                        android:id="@+id/tvConfirmM4002"
+                        android:id="@+id/tvConfirmM4002_molienda"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -663,7 +663,7 @@
                 </LinearLayout>
 
                     <Button
-                        android:id="@+id/btnConfirmedRemo2"
+                        android:id="@+id/btnConfirmedRemo2_molienda"
                         android:layout_width="278dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="25dp"
@@ -698,7 +698,7 @@
                     app:cardElevation="8dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:id="@+id/cardviewonesuccesful3"
+                    android:id="@+id/cardviewonesuccesful3_molienda"
                     app:contentPadding="12dp">
 
 
@@ -735,7 +735,7 @@
 
 
                                 <TextView
-                                    android:id="@+id/tvConfirmMuestra3"
+                                    android:id="@+id/tvConfirmMuestra3_molienda"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -759,7 +759,7 @@
 
 
                                 <TextView
-                                    android:id="@+id/tvConfirmVertimil3"
+                                    android:id="@+id/tvConfirmVertimil3_molienda"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -784,7 +784,7 @@
 
 
                                 <TextView
-                                    android:id="@+id/tvConfirmTime3"
+                                    android:id="@+id/tvConfirmTime3_molienda"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -809,7 +809,7 @@
 
 
                                 <TextView
-                                    android:id="@+id/tvConfirmID3"
+                                    android:id="@+id/tvConfirmID3_molienda"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -833,7 +833,7 @@
 
 
                                 <TextView
-                                    android:id="@+id/tvConfirmAVE3"
+                                    android:id="@+id/tvConfirmAVE3_molienda"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -858,7 +858,7 @@
 
 
                                 <TextView
-                                    android:id="@+id/tvConfirmSD3"
+                                    android:id="@+id/tvConfirmSD3_molienda"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -883,7 +883,7 @@
 
 
                                 <TextView
-                                    android:id="@+id/tvConfirmDensity3"
+                                    android:id="@+id/tvConfirmDensity3_molienda"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -908,7 +908,7 @@
 
 
                                 <TextView
-                                    android:id="@+id/tvConfirmSolidoPuro3"
+                                    android:id="@+id/tvConfirmSolidoPuro3_molienda"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -932,7 +932,7 @@
 
 
                                 <TextView
-                                    android:id="@+id/tvConfirmM2003"
+                                    android:id="@+id/tvConfirmM2003_molienda"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -956,7 +956,7 @@
 
 
                                 <TextView
-                                    android:id="@+id/tvConfirmM4003"
+                                    android:id="@+id/tvConfirmM4003_molienda"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -965,7 +965,7 @@
                             </LinearLayout>
 
                             <Button
-                                android:id="@+id/btnConfirmedRemo3"
+                                android:id="@+id/btnConfirmedRemo3_molienda"
                                 android:layout_width="278dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="25dp"
@@ -997,7 +997,7 @@
 
 
     <Button
-        android:id="@+id/btnRegresarMenu"
+        android:id="@+id/btnRegresarMenu_molienda"
         android:layout_width="278dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="637dp"
