@@ -117,9 +117,7 @@ class ActivityMenuPrincipal : AppCompatActivity() {
     }
 
 
-    override fun onBackPressed() {
-            MenuPrincipal.visibility== View.VISIBLE
-    }
+
 
     companion object {
         private const val TAG = "ActivityMenuPrincipal"
