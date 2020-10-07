@@ -8,12 +8,12 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.southerncooper.R
 import com.example.southerncooper.io.ApiService
 import com.example.southerncooper.io.Response.SimpleResponse
@@ -57,7 +57,7 @@ class ActivityMolienda2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_remolienda_c1)
+        setContentView(R.layout.activity_molienda2)
 
 
 
@@ -343,49 +343,41 @@ class ActivityMolienda2 : AppCompatActivity() {
 
             }
             Step3_moliendac2.visibility == View.VISIBLE -> {
-                Step2_moliendac2.visibility = View.VISIBLE
-                capture_btn_moliendac2.visibility = View.VISIBLE
-                galery_btn_moliendac2.visibility = View.VISIBLE
-                image_view_moliendac2.visibility = View.VISIBLE
-                Step3_moliendac2.visibility = View.GONE
+                SalirStep()
             }
             Step2_moliendac2.visibility == View.VISIBLE -> {
-                Step1_moliendac2.visibility = View.VISIBLE
-                Step2_moliendac2.visibility = View.GONE
-                capture_btn_moliendac2.visibility = View.VISIBLE
-                galery_btn_moliendac2.visibility = View.VISIBLE
-                image_view_moliendac2.visibility = View.VISIBLE
+                SalirStep()
             }
 
             Step1_moliendac2.visibility == View.VISIBLE -> {
 
 
-                capture_btn_moliendac2.visibility = View.VISIBLE
-                galery_btn_moliendac2.visibility = View.VISIBLE
-                image_view_moliendac2.visibility = View.VISIBLE
-
-                //Esta clase Builder nos facilitara la construccion de un dialogo
-                val builder= AlertDialog.Builder(this)
-
-                builder.setTitle(getString(R.string.dialog_create_muestra_exit_title))
-                builder.setMessage(getString(R.string.dialog_create_muestra_exit_message))
-                builder.setPositiveButton(getString(R.string.dialog_create_muestra_exit_positive_btn)) { _, _ ->
-                    //Esto dos parametros representan al dialogo omo tal y el boton sobre el cual d¿se hizo click y los renomberamos con quiones bajos
-                    finish()
-                }
-                builder.setNegativeButton(getString(R.string.dialog_create_muestra_negative_btn)) { dialog, _ ->
-                    //osea si se desea continua con el registro se ocualta dialog
-                    dialog.dismiss()
-                }
-
-                val dialog = builder.create()
-                dialog.show()
-                //El builder nos cirbe para construir
+                SalirStep()
             }
         }
     }
 
 
+    private fun SalirStep(){
+
+        //Esta clase Builder nos facilitara la construccion de un dialogo
+        val builder= AlertDialog.Builder(this)
+
+        builder.setTitle(getString(R.string.dialog_create_muestra_exit_title))
+        builder.setMessage(getString(R.string.dialog_create_muestra_exit_message))
+        builder.setPositiveButton(getString(R.string.dialog_create_muestra_exit_positive_btn)) { _, _ ->
+            //Esto dos parametros representan al dialogo omo tal y el boton sobre el cual d¿se hizo click y los renomberamos con quiones bajos
+            finish()
+        }
+        builder.setNegativeButton(getString(R.string.dialog_create_muestra_negative_btn)) { dialog, _ ->
+            //osea si se desea continua con el registro se ocualta dialog
+            dialog.dismiss()
+        }
+
+        val dialog = builder.create()
+        dialog.show()
+        //El builder nos cirbe para construir
+    }
 
 
     private fun showMoliendaC2DataToConfirm(){

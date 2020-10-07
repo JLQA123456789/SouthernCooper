@@ -13,14 +13,14 @@ import com.example.southerncooper.util.PreferenceHelper
 import com.example.southerncooper.util.PreferenceHelper.get
 import com.example.southerncooper.util.toast
 import com.kofigyan.stateprogressbar.StateProgressBar
-import kotlinx.android.synthetic.main.activity_norte.*
+import kotlinx.android.synthetic.main.activity_cobre.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.util.*
 
 
-class ActivityNorte : AppCompatActivity() {
+class ActivityCobre : AppCompatActivity() {
 
 
     private val apiService: ApiService by lazy{
@@ -38,53 +38,53 @@ class ActivityNorte : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_norte)
+        setContentView(R.layout.activity_cobre)
 
 
-        val stateProgressBar = findViewById(R.id.progress) as StateProgressBar
+        val stateProgressBar = findViewById(R.id.progress_cobre) as StateProgressBar
         stateProgressBar.setStateDescriptionData(descriptionData)
 
 
-        button.setOnClickListener {
+        button_cobre.setOnClickListener {
 
 
             when (stateProgressBar.getCurrentStateNumber()) {
                 1 -> {
                     stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.TWO)
-                    Step1_norte.visibility = View.GONE
-                    Step2_norte.visibility = View.VISIBLE
-                    etName_norte.error = getString(R.string.validate_name_description)
-                    etDate_norte.error = getString(R.string.validate_remolienda_date)
-                    etTime_norte.error = getString(R.string.validate_remolienda_time)
+                    Step1_cobre.visibility = View.GONE
+                    Step2_cobre.visibility = View.VISIBLE
+                    etName_cobre.error = getString(R.string.validate_name_description)
+                    etDate_cobre.error = getString(R.string.validate_remolienda_date)
+                    etTime_cobre.error = getString(R.string.validate_remolienda_time)
 
                 }
                 2 -> {
                     stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.THREE)
-                    Step2_norte.visibility = View.GONE
-                    Step3_norte.visibility = View.VISIBLE
-                    }
+                    Step2_cobre.visibility = View.GONE
+                    Step3_cobre.visibility = View.VISIBLE
+                }
 
                 3 -> {stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.FOUR)
 
-                    Step3_norte.visibility = View.GONE
-                    Step4_norte.visibility = View.VISIBLE
+                    Step3_cobre.visibility = View.GONE
+                    Step4_cobre.visibility = View.VISIBLE
 
                 }
 
                 else -> { // Note the block
 
-                    if (btnConfirmedNorte.isClickable == true ){
+                    if (btnConfirmedCobre.isClickable == true ){
 
                         toast("Lo siento pero no guardaste")
                         stateProgressBar.setAllStatesCompleted(false)
-                        Step4_norte.visibility = View.VISIBLE
-                        Step5_norte.visibility = View.GONE
+                        Step4_cobre.visibility = View.VISIBLE
+                        Step5_cobre.visibility = View.GONE
                     } else{
                         stateProgressBar.setAllStatesCompleted(true)
-                        Step4_norte.visibility = View.GONE
-                        Step5_norte.visibility = View.VISIBLE
-                        button.visibility = View.GONE
-                        button2.visibility = View.GONE
+                        Step4_cobre.visibility = View.GONE
+                        Step5_cobre.visibility = View.VISIBLE
+                        button_cobre.visibility = View.GONE
+                        button2_cobre.visibility = View.GONE
                     }
 
                 }
@@ -95,29 +95,29 @@ class ActivityNorte : AppCompatActivity() {
 
         }
 
-        button2.setOnClickListener {
+        button2_cobre.setOnClickListener {
 
             when (stateProgressBar.getCurrentStateNumber()) {
                 1 -> {stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.TWO)
-                    Step3_norte.visibility = View.GONE
-                    Step2_norte.visibility = View.VISIBLE
-                     }
+                    Step3_cobre.visibility = View.GONE
+                    Step2_cobre.visibility = View.VISIBLE
+                }
 
                 2 -> {stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.ONE)
 
-                    Step2_norte.visibility = View.GONE
-                    Step1_norte.visibility = View.VISIBLE
-                     }
+                    Step2_cobre.visibility = View.GONE
+                    Step1_cobre.visibility = View.VISIBLE
+                }
                 3 -> {stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.TWO)
-                    Step3_norte.visibility = View.GONE
-                    Step2_norte.visibility = View.VISIBLE
+                    Step3_cobre.visibility = View.GONE
+                    Step2_cobre.visibility = View.VISIBLE
                 }
 
 
                 else ->  {stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.THREE)
 
-                    Step4_norte.visibility = View.GONE
-                    Step3_norte.visibility = View.VISIBLE
+                    Step4_cobre.visibility = View.GONE
+                    Step3_cobre.visibility = View.VISIBLE
 
                 }
             }
@@ -125,34 +125,35 @@ class ActivityNorte : AppCompatActivity() {
         }
 
 
-        btnConfirmedNorte.setOnClickListener{
 
-            performStoreNorte()
+        btnConfirmedCobre.setOnClickListener{
+
+            performStoreCobre()
         }
 
-        btnConfirmedNorte2.setOnClickListener{
+        btnConfirmedCobre2.setOnClickListener{
 
-            performStoreNorte()
+            performStoreCobre()
         }
 
-        btnConfirmedNorte3.setOnClickListener {
+        btnConfirmedCobre3.setOnClickListener {
 
-            performStoreNorte()
+            performStoreCobre()
 
         }
-        btnRegresarNorte.setOnClickListener{
+        btnRegresarCobre.setOnClickListener{
             finish()
         }
 
 
         val MuestraOptions = arrayOf(" Reb.Hidro.L1", " Reb.Hidro.L2", "Relave.Final", "Rela.Agot.L1", "Rela.Agot.L2", "Alimt.1ra.Limp", "Conc.1ra.Limp.L1", "Conc.1ra.Limp.L2", "Conc.Colect", "Rel.2da.Limp.L1","Rel.2da.Limp.L2" , "Conc.Prim.L2" , "Conc.Prim.L1")
-        spinnerMuestra_norte.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, MuestraOptions)
+        spinnerMuestra_cobre.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, MuestraOptions)
 
         val Muestra1Options = arrayOf(" Reb.Hidro.L1", " Reb.Hidro.L2", "Relave.Final", "Rela.Agot.L1", "Rela.Agot.L2", "Alimt.1ra.Limp", "Conc.1ra.Limp.L1", "Conc.1ra.Limp.L2", "Conc.Colect", "Rel.2da.Limp.L1","Rel.2da.Limp.L2" , "Conc.Prim.L2" , "Conc.Prim.L1")
-        spinnerMuestra2_norte.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Muestra1Options)
+        spinnerMuestra2_cobre.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Muestra1Options)
 
         val Muestra2Options = arrayOf(" Reb.Hidro.L1", " Reb.Hidro.L2", "Relave.Final", "Rela.Agot.L1", "Rela.Agot.L2", "Alimt.1ra.Limp", "Conc.1ra.Limp.L1", "Conc.1ra.Limp.L2", "Conc.Colect", "Rel.2da.Limp.L1","Rel.2da.Limp.L2" , "Conc.Prim.L2" , "Conc.Prim.L1")
-        spinnerMuestra3_norte.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Muestra2Options)
+        spinnerMuestra3_cobre.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Muestra2Options)
 
 
 
@@ -171,7 +172,7 @@ class ActivityNorte : AppCompatActivity() {
 
             // Toast.makeText(this,"$y-$m-$d", Toast.LENGTH_SHORT).show()
             selectedCalendar.set(y, m, d)
-            etDate_norte.setText(
+            etDate_cobre.setText(
                 resources.getString(
                     R.string.date_format,
                     y,
@@ -179,7 +180,7 @@ class ActivityNorte : AppCompatActivity() {
                     d.twoDigits()
                 )
             )
-            etDate_norte.error = null
+            etDate_cobre.error = null
         }
 
         // new dialogo
@@ -205,21 +206,21 @@ class ActivityNorte : AppCompatActivity() {
 
 
         when {
-            Step4_norte.visibility== View.VISIBLE -> {
+            Step4_cobre.visibility== View.VISIBLE -> {
                 SalirStep()
 
 
             }
-            Step3_norte.visibility == View.VISIBLE -> {
+            Step3_cobre.visibility == View.VISIBLE -> {
                 SalirStep()
 
             }
-            Step2_norte.visibility == View.VISIBLE -> {
+            Step2_cobre.visibility == View.VISIBLE -> {
                 SalirStep()
 
             }
 
-            Step1_norte.visibility == View.VISIBLE -> {
+            Step1_cobre.visibility == View.VISIBLE -> {
                 SalirStep()
 
             }
@@ -247,24 +248,24 @@ class ActivityNorte : AppCompatActivity() {
         //El builder nos cirbe para construir
     }
 
-    private fun performStoreNorte(){
+    private fun performStoreCobre(){
 
-        if (btnConfirmedNorte.isClickable){
+        if (btnConfirmedCobre.isClickable){
 
-            btnConfirmedNorte.isClickable = false
+            btnConfirmedCobre.isClickable = false
 
             val jwt = preferences["jwt", ""]
             val authHeader =  "Bearer $jwt"
-            val name = etName_norte.text.toString()
-            val date = etDate_norte.text.toString()
-            val muestra =  spinnerMuestra_norte.selectedItem.toString()
-            val hora = etTime_norte.text.toString()
-            val identify = etID_norte.text.toString()
-            val codigo = etCodigo_norte.text.toString()
+            val name = etName_cobre.text.toString()
+            val date = etDate_cobre.text.toString()
+            val muestra =  spinnerMuestra_cobre.selectedItem.toString()
+            val hora = etTime_cobre.text.toString()
+            val identify = etID_cobre.text.toString()
+            val codigo = etCodigo_cobre.text.toString()
 
 
 
-            val call = apiService.storeNorte(
+            val call = apiService.storeCobre(
                 authHeader, name,
                 date, muestra,hora,
                 identify, codigo
@@ -272,7 +273,7 @@ class ActivityNorte : AppCompatActivity() {
             call.enqueue(object: Callback<SimpleResponse> {
                 override fun onFailure(call: Call<SimpleResponse>, t: Throwable) {
                     toast(t.localizedMessage)
-                    btnConfirmedNorte.isClickable = true
+                    btnConfirmedCobre.isClickable = true
                 }
 
                 override fun onResponse(
@@ -285,7 +286,7 @@ class ActivityNorte : AppCompatActivity() {
                         //finish()
                     } else {
                         toast("Ocurrió un error inesperado registrando la muestra")
-                        btnConfirmedNorte.isClickable = true
+                        btnConfirmedCobre.isClickable = true
 
                     }
 
@@ -297,22 +298,22 @@ class ActivityNorte : AppCompatActivity() {
         }
 
 
-        else if (btnConfirmedNorte2.isClickable){
+        else if (btnConfirmedCobre2.isClickable){
 
-            btnConfirmedNorte2.isClickable = false
+            btnConfirmedCobre2.isClickable = false
 
             val jwt = preferences["jwt", ""]
             val authHeader =  "Bearer $jwt"
-            val name = etName_norte.text.toString()
-            val date = etDate_norte.text.toString()
-            val muestra =  spinnerMuestra2_norte.selectedItem.toString()
-            val hora = etTime2_norte.text.toString()
-            val identify = etID2_norte.text.toString()
-            val codigo = etCodigo2_norte.text.toString()
+            val name = etName_cobre.text.toString()
+            val date = etDate_cobre.text.toString()
+            val muestra =  spinnerMuestra2_cobre.selectedItem.toString()
+            val hora = etTime2_cobre.text.toString()
+            val identify = etID2_cobre.text.toString()
+            val codigo = etCodigo2_cobre.text.toString()
 
 
 
-            val call = apiService.storeNorte(
+            val call = apiService.storeCobre(
                 authHeader, name,
                 date, muestra, hora,
                 identify, codigo
@@ -320,7 +321,7 @@ class ActivityNorte : AppCompatActivity() {
             call.enqueue(object: Callback<SimpleResponse> {
                 override fun onFailure(call: Call<SimpleResponse>, t: Throwable) {
                     toast(t.localizedMessage)
-                    btnConfirmedNorte2.isClickable = true
+                    btnConfirmedCobre2.isClickable = true
                 }
 
                 override fun onResponse(
@@ -333,7 +334,7 @@ class ActivityNorte : AppCompatActivity() {
                         //finish()
                     } else {
                         toast("Ocurrió un error inesperado registrando la muestra")
-                        btnConfirmedNorte2.isClickable = true
+                        btnConfirmedCobre2.isClickable = true
 
                     }
 
@@ -346,20 +347,20 @@ class ActivityNorte : AppCompatActivity() {
         }
 
         else {
-            btnConfirmedNorte3.isClickable = false
+            btnConfirmedCobre3.isClickable = false
 
             val jwt = preferences["jwt", ""]
             val authHeader = "Bearer $jwt"
-            val name = etName_norte.text.toString()
-            val date = etDate_norte.text.toString()
-            val muestra = spinnerMuestra3_norte.selectedItem.toString()
-            val hora = etTime3_norte.text.toString()
-            val identify = etID3_norte.text.toString()
-            val codigo = etCodigo2_norte.text.toString()
+            val name = etName_cobre.text.toString()
+            val date = etDate_cobre.text.toString()
+            val muestra = spinnerMuestra3_cobre.selectedItem.toString()
+            val hora = etTime3_cobre.text.toString()
+            val identify = etID3_cobre.text.toString()
+            val codigo = etCodigo2_cobre.text.toString()
 
 
 
-            val call = apiService.storeNorte(
+            val call = apiService.storeCobre(
                 authHeader, name,
                 date, muestra, hora,
                 identify, codigo
@@ -367,7 +368,7 @@ class ActivityNorte : AppCompatActivity() {
             call.enqueue(object : Callback<SimpleResponse> {
                 override fun onFailure(call: Call<SimpleResponse>, t: Throwable) {
                     toast(t.localizedMessage)
-                    btnConfirmedNorte3.isClickable = true
+                    btnConfirmedCobre3.isClickable = true
                 }
 
                 override fun onResponse(
@@ -379,7 +380,7 @@ class ActivityNorte : AppCompatActivity() {
                         //finish()
                     } else {
                         toast("Ocurrió un error inesperado registrando la muestra")
-                        btnConfirmedNorte3.isClickable = true
+                        btnConfirmedCobre3.isClickable = true
 
                     }
 

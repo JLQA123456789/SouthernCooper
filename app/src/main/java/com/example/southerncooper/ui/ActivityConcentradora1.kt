@@ -1,15 +1,10 @@
 package com.example.southerncooper.ui
 
-import android.app.AlertDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.example.southerncooper.R
-import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_concentradora1.*
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_norte.*
 
 class ActivityConcentradora1 : AppCompatActivity() {
 
@@ -42,7 +37,10 @@ class ActivityConcentradora1 : AppCompatActivity() {
             val intent = Intent(this, ActivityNorte::class.java)
             startActivity(intent)
         }
-
+        btnMoly.setOnClickListener{
+            val intent = Intent(this, ActivityMoly::class.java)
+            startActivity(intent)
+        }
 
     }
 

@@ -22,7 +22,6 @@ import com.example.southerncooper.util.PreferenceHelper
 import com.example.southerncooper.util.PreferenceHelper.get
 import com.example.southerncooper.util.toast
 import com.github.chrisbanes.photoview.PhotoView
-import kotlinx.android.synthetic.main.activity_analizadores_id.*
 import kotlinx.android.synthetic.main.activity_molienda_c1.*
 import kotlinx.android.synthetic.main.activity_molienda_c1_card_view_confirmed.*
 import retrofit2.Call
@@ -330,7 +329,6 @@ class ActivityMoliendaC1 : AppCompatActivity() {
             = if(this >= 10) this.toString() else "0$this"
 
 
-
     override fun onBackPressed(){
 
 
@@ -344,48 +342,41 @@ class ActivityMoliendaC1 : AppCompatActivity() {
 
             }
             Step3_molienda.visibility == View.VISIBLE -> {
-                Step2_molienda.visibility = View.VISIBLE
-                capture_btn_molienda.visibility = View.VISIBLE
-                galery_btn_molienda.visibility = View.VISIBLE
-                image_view_molienda.visibility = View.VISIBLE
-                Step3_molienda.visibility = View.GONE
+                SalirStep()
             }
             Step2_molienda.visibility == View.VISIBLE -> {
-                Step1_molienda.visibility = View.VISIBLE
-                Step2_molienda.visibility = View.GONE
-                capture_btn_molienda.visibility = View.VISIBLE
-                galery_btn_molienda.visibility = View.VISIBLE
-                image_view_molienda.visibility = View.VISIBLE
+                SalirStep()
             }
 
             Step1_molienda.visibility == View.VISIBLE -> {
 
 
-                capture_btn_molienda.visibility = View.VISIBLE
-                galery_btn_molienda.visibility = View.VISIBLE
-                image_view_molienda.visibility = View.VISIBLE
-
-                //Esta clase Builder nos facilitara la construccion de un dialogo
-                val builder= AlertDialog.Builder(this)
-
-                builder.setTitle(getString(R.string.dialog_create_muestra_exit_title))
-                builder.setMessage(getString(R.string.dialog_create_muestra_exit_message))
-                builder.setPositiveButton(getString(R.string.dialog_create_muestra_exit_positive_btn)) { _, _ ->
-                    //Esto dos parametros representan al dialogo omo tal y el boton sobre el cual d¿se hizo click y los renomberamos con quiones bajos
-                    finish()
-                }
-                builder.setNegativeButton(getString(R.string.dialog_create_muestra_negative_btn)) { dialog, _ ->
-                    //osea si se desea continua con el registro se ocualta dialog
-                    dialog.dismiss()
-                }
-
-                val dialog = builder.create()
-                dialog.show()
-                //El builder nos cirbe para construir
+                SalirStep()
             }
         }
     }
 
+
+    private fun SalirStep(){
+
+        //Esta clase Builder nos facilitara la construccion de un dialogo
+        val builder= AlertDialog.Builder(this)
+
+        builder.setTitle(getString(R.string.dialog_create_muestra_exit_title))
+        builder.setMessage(getString(R.string.dialog_create_muestra_exit_message))
+        builder.setPositiveButton(getString(R.string.dialog_create_muestra_exit_positive_btn)) { _, _ ->
+            //Esto dos parametros representan al dialogo omo tal y el boton sobre el cual d¿se hizo click y los renomberamos con quiones bajos
+            finish()
+        }
+        builder.setNegativeButton(getString(R.string.dialog_create_muestra_negative_btn)) { dialog, _ ->
+            //osea si se desea continua con el registro se ocualta dialog
+            dialog.dismiss()
+        }
+
+        val dialog = builder.create()
+        dialog.show()
+        //El builder nos cirbe para construir
+    }
 
 
 

@@ -28,6 +28,11 @@ class ActivityConcentradora2 : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btnCobre.setOnClickListener{
+            val intent = Intent(this, ActivityCobre::class.java)
+            startActivity(intent)
+        }
+
 
 
 

@@ -1,8 +1,7 @@
 package com.example.southerncooper.ui
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.example.southerncooper.R
 import com.example.southerncooper.io.ApiService
 import com.example.southerncooper.model.User

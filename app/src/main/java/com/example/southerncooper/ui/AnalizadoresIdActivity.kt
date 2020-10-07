@@ -1,24 +1,18 @@
 package com.example.southerncooper.ui
 
-import android.app.AlertDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.southerncooper.R
 import com.example.southerncooper.io.ApiService
 import com.example.southerncooper.model.Molienda
 import com.example.southerncooper.model.Quinta
 import com.example.southerncooper.model.Remolienda
 import kotlinx.android.synthetic.main.activity_analizadores_id.*
-import kotlinx.android.synthetic.main.activity_remolienda_c1.*
-import kotlinx.android.synthetic.main.activity_remolienda_c1_card_view_confirmed.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.lang.reflect.Array
 
 class AnalizadoresIdActivity : AppCompatActivity() {
 

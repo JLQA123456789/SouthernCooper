@@ -1,20 +1,18 @@
 package com.example.southerncooper.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
-import com.example.southerncooper.util.PreferenceHelper
-import kotlinx.android.synthetic.main.activity_main.*
-import com.example.southerncooper.util.PreferenceHelper.set
-import com.example.southerncooper.util.PreferenceHelper.get
+import androidx.appcompat.app.AppCompatActivity
 import com.example.southerncooper.R
 import com.example.southerncooper.io.ApiService
 import com.example.southerncooper.io.Response.LoginResponse
+import com.example.southerncooper.util.PreferenceHelper
+import com.example.southerncooper.util.PreferenceHelper.get
+import com.example.southerncooper.util.PreferenceHelper.set
 import com.example.southerncooper.util.toast
 import com.google.android.material.snackbar.Snackbar
-import com.google.firebase.iid.FirebaseInstanceId
+import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

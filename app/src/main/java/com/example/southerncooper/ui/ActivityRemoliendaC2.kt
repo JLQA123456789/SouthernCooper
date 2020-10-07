@@ -22,7 +22,6 @@ import com.example.southerncooper.util.PreferenceHelper
 import com.example.southerncooper.util.PreferenceHelper.get
 import com.example.southerncooper.util.toast
 import com.github.chrisbanes.photoview.PhotoView
-import kotlinx.android.synthetic.main.activity_analizadores_id.*
 import kotlinx.android.synthetic.main.activity_remolienda_c2.*
 import kotlinx.android.synthetic.main.activity_remolienda_c2_card_view_confirmed.*
 import retrofit2.Call
@@ -344,50 +343,41 @@ class ActivityRemoliendaC2 : AppCompatActivity() {
 
             }
             Step3_remoliendac2.visibility == View.VISIBLE -> {
-                Step2_remoliendac2.visibility = View.VISIBLE
-                capture_btn_remoliendac2.visibility = View.VISIBLE
-                galery_btn_remoliendac2.visibility = View.VISIBLE
-                image_view_remoliendac2.visibility = View.VISIBLE
-                Step3_remoliendac2.visibility = View.GONE
+                SalirStep()
             }
             Step2_remoliendac2.visibility == View.VISIBLE -> {
-                Step1_remoliendac2.visibility = View.VISIBLE
-                Step2_remoliendac2.visibility = View.GONE
-                capture_btn_remoliendac2.visibility = View.VISIBLE
-                galery_btn_remoliendac2.visibility = View.VISIBLE
-                image_view_remoliendac2.visibility = View.VISIBLE
+                SalirStep()
             }
 
             Step1_remoliendac2.visibility == View.VISIBLE -> {
 
 
-                capture_btn_remoliendac2.visibility = View.VISIBLE
-                galery_btn_remoliendac2.visibility = View.VISIBLE
-                image_view_remoliendac2.visibility = View.VISIBLE
-
-                //Esta clase Builder nos facilitara la construccion de un dialogo
-                val builder= AlertDialog.Builder(this)
-
-                builder.setTitle(getString(R.string.dialog_create_muestra_exit_title))
-                builder.setMessage(getString(R.string.dialog_create_muestra_exit_message))
-                builder.setPositiveButton(getString(R.string.dialog_create_muestra_exit_positive_btn)) { _, _ ->
-                    //Esto dos parametros representan al dialogo omo tal y el boton sobre el cual d¿se hizo click y los renomberamos con quiones bajos
-                    finish()
-                }
-                builder.setNegativeButton(getString(R.string.dialog_create_muestra_negative_btn)) { dialog, _ ->
-                    //osea si se desea continua con el registro se ocualta dialog
-                    dialog.dismiss()
-                }
-
-                val dialog = builder.create()
-                dialog.show()
-                //El builder nos cirbe para construir
+                SalirStep()
             }
         }
     }
 
 
+    private fun SalirStep(){
 
+        //Esta clase Builder nos facilitara la construccion de un dialogo
+        val builder= AlertDialog.Builder(this)
+
+        builder.setTitle(getString(R.string.dialog_create_muestra_exit_title))
+        builder.setMessage(getString(R.string.dialog_create_muestra_exit_message))
+        builder.setPositiveButton(getString(R.string.dialog_create_muestra_exit_positive_btn)) { _, _ ->
+            //Esto dos parametros representan al dialogo omo tal y el boton sobre el cual d¿se hizo click y los renomberamos con quiones bajos
+            finish()
+        }
+        builder.setNegativeButton(getString(R.string.dialog_create_muestra_negative_btn)) { dialog, _ ->
+            //osea si se desea continua con el registro se ocualta dialog
+            dialog.dismiss()
+        }
+
+        val dialog = builder.create()
+        dialog.show()
+        //El builder nos cirbe para construir
+    }
 
     private fun showRemoliendaC2DataToConfirm(){
 

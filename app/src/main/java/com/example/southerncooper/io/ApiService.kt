@@ -141,6 +141,17 @@ interface ApiService {
                     @Query("codigolabquimico") codigo: String
     ): Call<SimpleResponse>
 
+    @POST("moly")
+    @Headers("Accept: application/json")
+    fun storeMoly(@Header("Authorization") authHeader: String,
+
+                   @Query("name") name: String,
+                   @Query("date") date: String,
+                   @Query("muestra") muestra: String,
+                   @Query("hora") hora: String,
+                   @Query("identify") identify: String,
+                   @Query("codigolabquimico") codigo: String
+    ): Call<SimpleResponse>
 
 
     @GET("id/remoliendac2")
@@ -188,6 +199,18 @@ interface ApiService {
                           @Query("m400") m400: String
     ): Call<SimpleResponse>
 
+
+    @POST("cobre")
+    @Headers("Accept: application/json")
+    fun storeCobre(@Header("Authorization") authHeader: String,
+
+                  @Query("name") name: String,
+                  @Query("date") date: String,
+                  @Query("muestra") muestra: String,
+                  @Query("hora") hora: String,
+                  @Query("identify") identify: String,
+                  @Query("codigolabquimico") codigo: String
+    ): Call<SimpleResponse>
 
     companion object Factory{
 
